@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Inicio | Sistema de Estoque</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<div th:replace="~{fragments/header :: header}"></div>
+
+	<main class="senai-main">
+		<section class="senai-hero">
+			<div class="senai-shell home-layout">
+				<div>
+					<h1 class="senai-title">Sistema de Estoque e Patrimonio</h1>
+					<p class="senai-subtitle">Controle simples para materiais, movimentacoes e ativos patrimoniais.</p>
+					<div class="senai-actions">
+						<a class="senai-button" th:href="@{/login}">Acessar Sistema</a>
+						<a class="senai-button button-light" th:href="@{/cadastro}">Criar Conta</a>
+					</div>
+				</div>
+
+				<div class="home-card">
+					<div th:replace="~{fragments/messages :: messages}"></div>
+					<h2>Dados iniciais para teste</h2>
+					<p>Usuario padrão: <strong>1001</strong></p>
+					<p>Senha padrao: <strong>1234</strong></p>
+					<p>O NIF <strong>1002</strong> está registrado tambem.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
